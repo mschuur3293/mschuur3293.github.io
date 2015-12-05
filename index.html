@@ -1,0 +1,151 @@
+<!-- Melanie Schuur
+     CIS 215
+     Final Project -->
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- Default Bootstrap Scripts and Stylesheets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
+          rel="stylesheet" type="text/css">
+    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css"
+          rel="stylesheet" type="text/css">
+    <!-- My Game Script and Stylesheet -->
+    <script src="script/script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Arvo:400,700,400italic|Open+Sans+Condensed:300,700"
+          rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Name The Character Game</title>
+</head>
+
+<body>
+    <!-- Start Game Div -->
+    <div class="section" id="startGame">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="images/game_title.png" id="titleImage" class="center-block img-responsive">
+                </div>
+            </div>
+            <br /><br />
+            <div class="row">
+                <!-- Empty Div for Padding -->
+                <div class="col-md-4"></div>
+                <!-- Start Button Div -->
+                <div class="col-md-4">
+                    <a class="btn btn-block btn-info" id="startButton" onclick="beginGame()">Play</a>
+                </div>
+                <!-- Empty Div for Padding -->
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Title Div -->
+    <div class="container hidden" id="titleDiv">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3 id="title">Name The Character</h3>
+            </div>
+        </div>
+    </div>
+    <!-- Image Div -->
+    <div class="section hidden" id="imageDiv">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <img id="characterImg" src="" class="center-block img-responsive img-thumbnail">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Answer Selection Div -->
+    <div class="section text-center hidden" id="answers">
+        <div class="container">
+            <div class="row">
+                <!-- Empty Div for Padding -->
+                <div class="col-md-2"></div>
+                <!-- Answer List Div -->
+                <div class="col-md-8">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="active" id="answer1" data-toggle="modal" data-target="#theModal"
+                            data-correct="false" onclick="checkAnswer(this)">
+                            <a href="#" id="data1">Answer1</a>
+                        </li>
+                        <li class="active" id="answer2" data-toggle="modal" data-target="#theModal"
+                            data-correct="false" onclick="checkAnswer(this)">
+                            <a href="#" id="data2">Answer2</a>
+                        </li>
+                        <li class="active" id="answer3" data-toggle="modal" data-target="#theModal"
+                            data-correct="false" onclick="checkAnswer(this)">
+                            <a href="#" id="data3">Answer3</a>
+                        </li>
+                        <li class="active" id="answer4" data-toggle="modal" data-target="#theModal"
+                            data-correct="false" onclick="checkAnswer(this)">
+                            <a href="#" id="data4">Answer4</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Empty Div for Padding -->
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Div -->
+    <div class="modal fade" id="theModal">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header" id="modalHeader">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                            data-backdrop="true">
+                        ×
+                    </button>
+                    <h4 class="modal-title" id="modalTitle">Response</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="modalMessage">The correct answer is: xxx</p>
+                </div>
+                <div class="modal-footer">
+                    <p id="modalScore" class="pull-left">You earned 0 points!</p>
+                    <a class="btn btn-primary" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Score Div -->
+    <div class="container hidden" id="scoreDiv">
+        <div class="row">
+            <div class="col-md-12">
+                <h5 id="result">
+                    <em>Your score is: 0</em>
+                </h5>
+            </div>
+        </div>
+    </div>
+    <!-- Empty Div for Padding -->
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Div -->
+    <footer class="section section-warning">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4 id="madeBy">
+                        <strong>Made by Auntie Melanie</strong>
+                    </h4>
+                    <p id="year">2015</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
